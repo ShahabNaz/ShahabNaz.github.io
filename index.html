@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Homepage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="profile-info">
+            <h1>Your Name</h1>
+            <img src="https://via.placeholder.com/150" alt="Your Photo" class="profile-photo">
+        </div>
+    </header>
+
+    <nav class="sidebar">
+        <div class="menu-toggle">
+            <span>Menu</span>
+        </div>
+        <ul class="main-menu">
+            <li><a href="#" data-submenu="about">About</a></li>
+            <li><a href="#" data-submenu="cv">My CV</a></li>
+            <li><a href="#" data-submenu="written">Written by me</a></li>
+            <li><a href="#" data-submenu="contact">Contact me</a></li>
+        </ul>
+        <div class="submenu" id="about-submenu">
+            <ul>
+                <li><a href="#">About Item 1</a></li>
+                <li><a href="#">About Item 2</a></li>
+            </ul>
+        </div>
+        <div class="submenu" id="cv-submenu">
+            <ul>
+                <li><a href="#">CV Item 1</a></li>
+                <li><a href="#">CV Item 2</a></li>
+            </ul>
+        </div>
+        <div class="submenu" id="written-submenu">
+            <ul>
+                <li><a href="#">Written Item 1</a></li>
+                <li><a href="#">Written Item 2</a></li>
+            </ul>
+        </div>
+        <div class="submenu" id="contact-submenu">
+            <ul>
+                <li><a href="#">Contact Item 1</a></li>
+                <li><a href="#">Contact Item 2</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="content">
+        <!-- Content will be loaded here based on menu selection -->
+        <h2>Welcome to my homepage!</h2>
+        <p>This is a placeholder for your main content.</p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
