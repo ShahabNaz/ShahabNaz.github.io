@@ -42,21 +42,14 @@ header {
     left: 0;
     top: 0;
     box-sizing: border-box;
-    transform: translateX(-250px); /* Initially hidden */
-    transition: transform 0.3s ease-in-out;
     z-index: 1000;
 }
 
 .sidebar.active {
-    transform: translateX(0); /* Show when active */
 }
 
 .menu-toggle {
-    padding: 15px 20px;
-    background-color: #555;
-    cursor: pointer;
-    text-align: center;
-    margin-bottom: 20px;
+    display: none; /* Hide the menu toggle button */
 }
 
 .main-menu {
@@ -77,7 +70,7 @@ header {
 }
 
 .submenu {
-    display: none; /* Hidden by default */
+    display: block; /* Always visible */
     background-color: #555;
     padding-left: 20px;
 }
