@@ -6,22 +6,28 @@ body {
     background-color: #f4f4f4;
 }
 
-header {
+.sidebar {
     width: 250px;
-    background-color: #333;
+    background-color: #333; /* Combined background for header and sidebar */
     color: white;
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding-top: 20px;
     position: fixed;
     height: 100%;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center profile info and menu */
 }
 
 .profile-info {
     text-align: center;
     margin-bottom: 30px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .profile-photo {
@@ -32,29 +38,19 @@ header {
     margin-top: 10px;
 }
 
-.sidebar {
-    width: 250px;
-    background-color: #444;
-    color: white;
-    padding-top: 20px;
-    position: fixed;
-    height: 100%;
-    left: 0;
-    top: 0;
-    box-sizing: border-box;
-    z-index: 1000;
-}
-
-.sidebar.active {
-}
-
+/* Remove .sidebar.active and .menu-toggle as they are no longer needed for static menu */
 .menu-toggle {
-    display: none; /* Hide the menu toggle button */
+    display: none; 
 }
 
 .main-menu {
     list-style: none;
     padding: 0;
+    width: 100%; /* Make menu take full width of sidebar */
+}
+
+.main-menu li {
+    width: 100%;
 }
 
 .main-menu li a {
@@ -66,13 +62,13 @@ header {
 }
 
 .main-menu li a:hover {
-    background-color: #666;
+    background-color: #444;
 }
 
 .submenu {
     display: block; /* Always visible */
-    background-color: #555;
-    padding-left: 20px;
+    background-color: #222; /* Slightly darker for submenu */
+    padding-left: 30px; /* Indent submenus */
 }
 
 .submenu ul {
@@ -88,11 +84,11 @@ header {
 }
 
 .submenu li a:hover {
-    background-color: #666;
+    background-color: #333;
 }
 
 .content {
-    margin-left: 250px; /* Adjust for sidebar width when open */
+    margin-left: 250px; /* Content starts after the fixed sidebar */
     padding: 20px;
     flex-grow: 1;
 }
